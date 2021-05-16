@@ -10,7 +10,7 @@ import (
 
 func main() {
 	dbDriver := "postgres"
-	dbSource := utils.GetStringEnv("DB_URL", "postgres://postgres@localhost:5432/go_todo_api?sslmode=disable")
+	dbSource := utils.GetStringEnv("DATABASE_URL", "postgres://postgres@localhost:5432/go_todo_api?sslmode=disable")
 
 	db, err := database.New(dbDriver, dbSource)
 	if err != nil {
